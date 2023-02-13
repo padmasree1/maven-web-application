@@ -14,7 +14,7 @@ maven "maven3.9.0"
                     properties([
                         parameters([
                             choice(
-                                choices: ['java'], 
+                                choices: ['git'], 
                                 name: 'TOOLS'
                             )
                          
@@ -23,9 +23,17 @@ maven "maven3.9.0"
 			   
                 }
 			    
-			   sh 'java --version'
+			  
             }
         }
+	stage('version')
+	{
+		steps{
+			sh 'git --version'
+		}
+		
+	}	
+			    
         stage('checkout')
         {
             steps{
