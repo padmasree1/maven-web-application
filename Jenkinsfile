@@ -8,7 +8,7 @@ maven "maven3.9.0"
 parameters([
     choice(
         choices:
-        ['git'], description: '', name: 'TOOLS')])])
+        ['git'], name: 'TOOLS')])])
     
     
     stages {
