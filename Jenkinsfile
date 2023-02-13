@@ -50,7 +50,7 @@ maven "maven3.9.0"
 stage("build docker image")
 {
 	steps{
-sh "docker build -t apache:V3 ."
+sh "docker build -t apache5 ."
 	
 	}
 }
