@@ -49,7 +49,9 @@ maven "maven3.9.0"
 	    
 stage("build docker image")
 {
+	steps{
 sh "docker build -t pache:V1 Dockerfile1"
+	}
 }
     }
 }
