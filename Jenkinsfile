@@ -3,6 +3,14 @@ pipeline {
     tools{
 maven "maven3.9.0"
 }
+    
+    
+parameters([
+    choice(
+        choices:
+        ['git'], description: '', name: 'TOOLS')])
+    
+    
     stages {
         stage('checkout')
         {
