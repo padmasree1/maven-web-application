@@ -23,8 +23,7 @@ maven "maven3.9.0"
 			   
                 }
 			    
-			    echo "git version is: " 
-					git --version
+			   sh 'java --version'
             }
         }
         stage('checkout')
