@@ -4,14 +4,25 @@ pipeline {
 maven "maven3.9.0"
 }
     
- options([   
-parameters([
-    choice(
-        choices:
-        ['git'], name: 'TOOLS')])])
     
     
     stages {
+        
+        stage('Setup parameters') {
+            steps {
+                script { 
+                    properties([
+                        parameters([
+                            choice(
+                                choices: ['java'], 
+                                name: 'TOOLS'
+                            )
+                         
+                        ])
+                    ])
+                }
+            }
+        }
         stage('checkout')
         {
             steps{
