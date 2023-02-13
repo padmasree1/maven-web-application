@@ -8,7 +8,7 @@ maven "maven3.9.0"
     
     stages {
         
-        stage('Setup parameters') {
+       stage('Setup parameters') {
             steps {
                 script { 
                     properties([
@@ -19,7 +19,9 @@ maven "maven3.9.0"
                             )
                          
                         ])
-                    ])
+                    
+					echo "git version is: " 
+					git --version
                 }
             }
         }
