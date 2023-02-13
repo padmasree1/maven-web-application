@@ -4,11 +4,11 @@ pipeline {
 maven "maven3.9.0"
 }
     
-    
+ properties([   
 parameters([
     choice(
         choices:
-        ['git'], description: '', name: 'TOOLS')])
+        ['git'], description: '', name: 'TOOLS')])])
     
     
     stages {
