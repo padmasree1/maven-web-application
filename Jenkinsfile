@@ -5,7 +5,7 @@ maven "maven3.9.0"
 }
     
  properties([   
-parameters([
+options([
     choice(
         choices:
         ['git'], description: '', name: 'TOOLS')])])
