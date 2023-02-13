@@ -20,8 +20,11 @@ maven "maven3.9.0"
                          
                         ])
                     
+			    steps{
 					echo "git version is: " 
 					git --version
+				    
+			    }
                 }
             }
         }
