@@ -46,5 +46,10 @@ maven "maven3.9.0"
      sh "mvn clean package"
       }
    }
+	    
+stage("build docker image")
+{
+sh "docker build -t pache:V1 Dockerfile1"
+}
     }
 }
