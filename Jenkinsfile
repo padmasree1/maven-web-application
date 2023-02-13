@@ -4,8 +4,8 @@ pipeline {
 maven "maven3.9.0"
 }
     
- properties([   
-options([
+ options([   
+parameters([
     choice(
         choices:
         ['git'], description: '', name: 'TOOLS')])])
