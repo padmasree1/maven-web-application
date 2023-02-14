@@ -51,7 +51,7 @@ stage("build docker image")
 {
 	steps{
  sh "docker build -t apache:2.0 ."
-		sh "docker ps -a"
+sh "docker ps -a"
 	
 	}
 }
